@@ -28,7 +28,7 @@ Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) 
 Selezionare tutti i corsi di laurea magistrale
 	SELECT * 
 	FROM `degrees` 
-	WHERE `level` = 'magistrale';
+	WHERE `level` LIKE 'magistrale';
 
 Da quanti dipartimenti è composta l'università?
 	SELECT COUNT(*) 
@@ -37,4 +37,4 @@ Da quanti dipartimenti è composta l'università?
 Quanti sono gli insegnanti che non hanno un numero di telefono?
 	SELECT COUNT(*) 
 	FROM `teachers` 
-	WHERE `phone` IS NOT NULL;
+	WHERE `phone` IS NULL;
